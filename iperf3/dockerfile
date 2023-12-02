@@ -1,7 +1,10 @@
 FROM debian
 
-# Install Flask
 RUN apt-get update
+
+#install tools for debug purposes
+RUN apt-get install -y iputils-ping procps net-tools htop traceroute
+
 RUN apt-get install -y iperf3
 
 EXPOSE 5201/tcp
