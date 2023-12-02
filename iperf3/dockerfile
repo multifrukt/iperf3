@@ -1,0 +1,10 @@
+FROM debian
+
+# Install Flask
+RUN apt-get update
+RUN apt-get install -y iperf3
+
+EXPOSE 5201/tcp
+EXPOSE 5201/udp
+
+CMD ["iperf3", "-s"]
